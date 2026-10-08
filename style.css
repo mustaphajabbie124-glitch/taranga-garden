@@ -1,0 +1,961 @@
+/* =========================
+   GENERAL RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #243b2a;
+    background: #ffffff;
+}
+
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+section {
+    scroll-margin-top: 90px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo a {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #1f6b3a;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #314c39;
+
+    transition: color 0.3s ease;
+}
+
+
+.nav-links a:hover {
+    color: #1f8a4c;
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 8px;
+}
+
+
+.menu-toggle span {
+    display: block;
+
+    width: 100%;
+    height: 3px;
+
+    margin: 5px 0;
+
+    background: #1f6b3a;
+
+    border-radius: 5px;
+
+    transition: all 0.3s ease;
+}
+
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(20, 70, 35, 0.82),
+            rgba(20, 70, 35, 0.82)
+        ),
+        url("images/garden-1.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: #ffffff;
+
+    padding: 80px 25px;
+}
+
+
+.hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.hero-label,
+.section-label {
+    color: #55b879;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+
+.hero h1 span {
+    color: #72d58e;
+    display: block;
+}
+
+
+.hero-text {
+    max-width: 720px;
+    margin: 0 auto 30px;
+
+    font-size: 1.05rem;
+    color: #edf8ef;
+}
+
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border-radius: 6px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+.primary-btn {
+    background: #2e8b57;
+    color: #ffffff;
+}
+
+
+.primary-btn:hover {
+    background: #237044;
+}
+
+
+.secondary-btn {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+
+.secondary-btn:hover {
+    background: #ffffff;
+    color: #1f6b3a;
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.introduction,
+.about,
+.products,
+.services,
+.gallery,
+.contact {
+    padding: 90px 25px;
+}
+
+
+.section-heading {
+    max-width: 850px;
+    margin: 0 auto 45px;
+
+    text-align: center;
+}
+
+
+.section-heading h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+
+    color: #1e3b27;
+}
+
+
+.section-heading > p:last-child {
+    color: #66766b;
+}
+
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.introduction {
+    background: #f4f8f3;
+}
+
+
+.intro-content {
+    max-width: 850px;
+    margin: 0 auto;
+
+    display: grid;
+    gap: 20px;
+}
+
+
+.intro-content p {
+    color: #506056;
+    font-size: 1.05rem;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: #ffffff;
+}
+
+
+.about-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+
+.about-content .section-heading {
+    margin-bottom: 30px;
+}
+
+
+.about-content > p {
+    margin-bottom: 18px;
+
+    color: #56645a;
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products {
+    background: #f4f8f3;
+}
+
+
+.product-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.product-card {
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.product-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+.product-card img {
+    height: 220px;
+
+    object-fit: cover;
+}
+
+
+.product-content {
+    padding: 20px;
+}
+
+
+.product-content h3 {
+    margin-bottom: 8px;
+
+    color: #1f6b3a;
+}
+
+
+.product-content p {
+    color: #66736a;
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    background: #ffffff;
+}
+
+
+.service-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.service-card {
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background: #f5f9f4;
+
+    border-radius: 12px;
+
+    border: 1px solid #e0e9e1;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.service-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+.service-icon {
+    font-size: 2.7rem;
+
+    margin-bottom: 15px;
+}
+
+
+.service-card h3 {
+    color: #1f6b3a;
+
+    margin-bottom: 10px;
+}
+
+
+.service-card p {
+    color: #66736a;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    background: #f4f8f3;
+}
+
+
+.gallery-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+
+.gallery-grid img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+
+    opacity: 0.88;
+}
+
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background: rgba(0, 0, 0, 0.88);
+}
+
+
+.lightbox.active {
+    display: flex;
+}
+
+
+.lightbox-image {
+    max-width: 90vw;
+    max-height: 85vh;
+
+    width: auto;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+
+.lightbox-close {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #1f6b3a;
+
+    font-size: 2rem;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 2001;
+}
+
+
+.lightbox-close:hover {
+    background: #2e8b57;
+    color: #ffffff;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    padding: 100px 25px;
+
+    background:
+        linear-gradient(
+            rgba(24, 83, 43, 0.92),
+            rgba(24, 83, 43, 0.92)
+        ),
+        url("images/tractor-1.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+
+.cta-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+
+.cta h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+
+.cta p:not(.section-label) {
+    color: #e3f1e6;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: #ffffff;
+}
+
+
+.contact-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.contact-item {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #f4f8f3;
+
+    border-radius: 10px;
+
+    border: 1px solid #e1e9e2;
+}
+
+
+.contact-item h3 {
+    margin-bottom: 10px;
+
+    color: #1f6b3a;
+}
+
+
+.contact-item p {
+    color: #5f6d63;
+}
+
+
+.contact-item a {
+    color: #237c47;
+
+    font-weight: 600;
+
+    word-break: break-word;
+}
+
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #163b24;
+
+    color: #ffffff;
+
+    padding: 50px 25px;
+}
+
+
+.footer-content {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.footer-content h2 {
+    margin-bottom: 8px;
+}
+
+
+.footer-content > p {
+    color: #c8d9cc;
+}
+
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    margin: 25px 0;
+}
+
+
+.footer-links a {
+    color: #dce9df;
+
+    transition: color 0.3s ease;
+}
+
+
+.footer-links a:hover {
+    color: #70d18b;
+}
+
+
+.copyright {
+    font-size: 0.9rem;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .product-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo a {
+        font-size: 1.35rem;
+    }
+
+    /* HAMBURGER BUTTON */
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        background: #ffffff;
+
+        border-top: 1px solid #eeeeee;
+
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 25px;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    /* REST OF MOBILE DESIGN */
+
+    .hero {
+        min-height: 80vh;
+        padding: 70px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-text {
+        font-size: 0.95rem;
+    }
+
+    .introduction,
+    .about,
+    .products,
+    .services,
+    .gallery,
+    .contact {
+        padding: 70px 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .gallery-grid img {
+        height: 180px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        padding: 75px 20px;
+    }
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery-grid img {
+        height: 230px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 2rem;
+    }
+
+
+    .lightbox {
+        padding: 15px;
+    }
+
+
+    .lightbox-image {
+        max-width: 95vw;
+        max-height: 80vh;
+    }
+
+}
